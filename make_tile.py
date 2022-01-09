@@ -14,7 +14,7 @@ if __name__=="__main__":
     if len(sys.argv) > 2:
         scale = int(sys.argv[2])
     number = str((pytz.utc.localize(datetime.datetime.utcnow()).astimezone(pytz.timezone("Europe/Berlin")).date()-datetime.date(2020,3,1)).days+1)
-    a,b,c = (open_digit(c) for c in str(number))
+    a,b,c = (open_digit(c) for c in str(number)[:3])
     base = Image.open("baseframe.png")
 
     digit_top=7
